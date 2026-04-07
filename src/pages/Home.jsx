@@ -22,7 +22,7 @@ function HeroSlider({ slides }) {
           key={i}
           ref={(el) => (slideRefs.current[i] = el)}
           className={`hero-slide${i === 0 ? ' active' : ''}`}
-          style={{ backgroundImage: `url('${src}')`, backgroundSize: 'cover', backgroundPosition: 'center' }}
+          style={{ backgroundImage: `url('${src}')` }}
         />
       ))}
       <div className="hero-dark-overlay"></div>

@@ -3506,20 +3506,27 @@ body {
 }
 
 @media (max-width: 768px) {
+    /* Show full hero image on mobile instead of cropping */
+    .hero-bg-slider {
+        background-color: var(--primary-blue);
+    }
     .hero-slide {
-        background-position: center center !important;
+        background-size: contain;
+        background-position: center center;
+        background-color: var(--primary-blue);
     }
     .hero-redesign {
-        min-height: 80vh;
+        min-height: auto;
+        height: auto;
+        padding-top: 6rem;
+        padding-bottom: 3rem;
     }
-}
-
-@media (max-width: 768px) {
     .slide {
-        background-position: center center !important;
+        background-size: contain;
+        background-position: center center;
     }
     .hero {
-        min-height: 60vh !important;
-        padding: 6rem 0 3rem !important;
+        min-height: 60vh;
+        padding: 6rem 0 3rem;
     }
 }

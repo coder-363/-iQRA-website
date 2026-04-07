@@ -6,7 +6,7 @@ export default function About() {
       {/* HERO */}
       <section className="hero-redesign" id="about-hero">
         <div className="hero-bg-slider">
-          <div className="hero-slide active" style={{ backgroundImage: "url('/img/cool.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hero-slide active" style={{ backgroundImage: "url('/img/cool.jpg')" }}></div>
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">

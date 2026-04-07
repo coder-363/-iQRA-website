@@ -53,7 +53,7 @@ export default function Facilities() {
       {/* HERO */}
       <section className="hero-redesign" id="campus-facilities-hero">
         <div className="hero-bg-slider">
-          <div className="hero-slide active" style={{ backgroundImage: "url('/img/life.png')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hero-slide active" style={{ backgroundImage: "url('/img/life.png')" }}></div>
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">

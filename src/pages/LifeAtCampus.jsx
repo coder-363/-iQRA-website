@@ -42,7 +42,7 @@ export default function LifeAtCampus() {
       {/* HERO */}
       <section className="hero-redesign" id="campus-life-hero">
         <div className="hero-bg-slider">
-          <div className="hero-slide active" style={{ backgroundImage: "url('/img/52.jpg')", backgroundSize: 'cover', backgroundPosition: 'center' }}></div>
+          <div className="hero-slide active" style={{ backgroundImage: "url('/img/52.jpg')" }}></div>
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
