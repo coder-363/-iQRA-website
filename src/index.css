@@ -3504,3 +3504,22 @@ body {
         margin-top: 2rem;
     }
 }
+
+@media (max-width: 768px) {
+    .hero-slide {
+        background-position: center center !important;
+    }
+    .hero-redesign {
+        min-height: 80vh;
+    }
+}
+
+@media (max-width: 768px) {
+    .slide {
+        background-position: center center !important;
+    }
+    .hero {
+        min-height: 60vh !important;
+        padding: 6rem 0 3rem !important;
+    }
+}
