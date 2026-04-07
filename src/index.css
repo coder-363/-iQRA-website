@@ -2231,6 +2231,10 @@ body {
     z-index: -1;
 }
 
+.hero-slide-mobile {
+    display: none;
+}
+
 .hero-slide {
     position: absolute;
     top: 0;
@@ -3483,6 +3487,14 @@ body {
         padding-top: 8rem;
         padding-bottom: 4rem;
         text-align: center;
+    }
+
+    .hero-slide-desktop {
+        display: none !important;
+    }
+
+    .hero-slide-mobile {
+        display: block !important;
     }
 
     .hero-redesign-container {

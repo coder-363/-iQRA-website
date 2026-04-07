@@ -1,7 +1,7 @@
 import { useEffect, useRef } from 'react';
 import { Link } from 'react-router-dom';
 
-function HeroSlider({ slides }) {
+function HeroSlider({ slides, mobileImage }) {
   const currentRef = useRef(0);
   const slideRefs = useRef([]);
 
@@ -17,14 +17,22 @@ function HeroSlider({ slides }) {
 
   return (
     <div className="hero-bg-slider">
+      {/* Desktop Slides */}
       {slides.map((src, i) => (
         <div
           key={i}
           ref={(el) => (slideRefs.current[i] = el)}
-          className={`hero-slide${i === 0 ? ' active' : ''}`}
+          className={`hero-slide hero-slide-desktop${i === 0 ? ' active' : ''}`}
           style={{ backgroundImage: `url('${src}')` }}
         />
       ))}
+      {/* Mobile Slide */}
+      {mobileImage && (
+        <div 
+          className="hero-slide hero-slide-mobile active" 
+          style={{ backgroundImage: `url('${mobileImage}')` }}
+        />
+      )}
       <div className="hero-dark-overlay"></div>
     </div>
   );
@@ -35,7 +43,10 @@ export default function Home() {
     <>
       {/* HERO */}
       <section className="hero-redesign" id="home">
-        <HeroSlider slides={['/img/hero1.png', '/img/her-new.png', '/img/hero-new12.png']} />
+        <HeroSlider 
+          slides={['/img/hero1.png', '/img/her-new.png', '/img/hero-new12.png']} 
+          mobileImage="/img/mobile hero.png"
+        />
         <div className="container hero-redesign-container">
           <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
             <span className="hero-tag">🎓 Admissions Open 2026</span>
