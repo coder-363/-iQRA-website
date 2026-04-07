@@ -1561,7 +1561,8 @@ body {
         left: -100%;
         width: 100%;
         height: calc(100vh - 70px);
-        background-color: var(--secondary-white);
+        background-color: var(--primary-blue);
+        display: flex;
         flex-direction: column;
         padding: 2rem;
         transition: 0.4s ease;
