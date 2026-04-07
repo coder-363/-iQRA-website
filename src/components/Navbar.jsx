@@ -72,12 +72,16 @@ export default function Navbar() {
                   <li key={item.label} className="nav-item-dropdown" ref={dropdownRef}>
                     <button
                       className={`nav-link nav-dropdown-toggle${isLifeAtCampusActive ? ' active' : ''}${dropdownOpen ? ' open' : ''}`}
-                      onClick={() => setDropdownOpen((prev) => !prev)}
+                      onClick={(e) => {
+                        e.stopPropagation();
+                        setDropdownOpen((prev) => !prev);
+                      }}
                       aria-haspopup="true"
                       aria-expanded={dropdownOpen}
                       id="life-at-campus-dropdown-btn"
                     >
                       <span className="nav-link-text">{item.label}</span>
+                      <i className={`fas fa-chevron-down nav-chevron${dropdownOpen ? ' rotated' : ''}`} style={{ marginLeft: '8px', fontSize: '0.8rem' }}></i>
                     </button>
                     <div className={`nav-dropdown-menu${dropdownOpen ? ' open' : ''}`} id="life-at-campus-dropdown">
                       {item.dropdown.map(({ to, label, icon }) => (
