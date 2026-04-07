@@ -94,18 +94,18 @@ export default function Facilities() {
           {facilityRows.map(({ subtitle, title, paragraphs, imgSrc, imgAlt, reverse }) => (
             <div className="side-feature-row" key={title}>
               {reverse && (
-                <div className="side-feature-image" data-aos="fade-right" data-aos-duration="800">
-                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} /></div>
+                <div className="side-feature-image" data-aos="fade-right" data-aos-duration="400">
+                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} loading="lazy" /></div>
                 </div>
               )}
-              <div className="side-feature-content" data-aos={reverse ? 'fade-left' : 'fade-right'} data-aos-duration="800" data-aos-delay={reverse ? 150 : 0}>
+              <div className="side-feature-content" data-aos={reverse ? 'fade-left' : 'fade-right'} data-aos-duration="400" data-aos-delay={reverse ? 80 : 0}>
                 <span className="section-subtitle">{subtitle}</span>
                 <h2>{title}</h2>
                 {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
               </div>
               {!reverse && (
-                <div className="side-feature-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
-                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} /></div>
+                <div className="side-feature-image" data-aos="fade-left" data-aos-duration="400" data-aos-delay="80">
+                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} loading="lazy" /></div>
                 </div>
               )}
             </div>

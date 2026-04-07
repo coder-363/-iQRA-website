@@ -37,13 +37,14 @@ export default function Home() {
       <section className="hero-redesign" id="home">
         <HeroSlider slides={['/img/hero1.png', '/img/her-new.png', '/img/hero-new12.png']} />
         <div className="container hero-redesign-container">
-          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="900">
+          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
             <span className="hero-tag">🎓 Admissions Open 2026</span>
             <h1 className="hero-redesign-title">IQRA Pioneers College</h1>
             <p className="hero-redesign-tagline">Faith, Knowledge, Leadership — Shaping the Future Together</p>
-            <p className="hero-redesign-desc">A modern educational institution dedicated to combining Islamic values with academic excellence, preparing students to become ethical leaders and responsible members of society.</p>
+            <p className="hero-redesign-desc">A modern educational institution dedicated to combining Islamic values with academic excellence, 
+                                                       preparing students to become ethical leaders and responsible members of society.</p>
             <div className="hero-redesign-btns">
-              <Link to="/contact" className="btn-hero-primary"><i className="fas fa-user-graduate"></i> Enroll Now</Link>
+              <Link to="/contact#contact-form" className="btn-hero-primary"><i className="fas fa-user-graduate"></i> Enroll Now</Link>
               <Link to="/about" className="btn-hero-outline">Learn More <i className="fas fa-arrow-right"></i></Link>
             </div>
           </div>
@@ -55,9 +56,9 @@ export default function Home() {
         <div className="container">
           <div className="stats-line-grid">
             {[
-              { icon: 'fa-users', num: '5000+', label: 'Enrolled Students', delay: 100 },
-              { icon: 'fa-chalkboard-teacher', num: '200+', label: 'Expert Faculty', delay: 200 },
-              { icon: 'fa-trophy', num: '98%', label: 'Success Rate', delay: 300 },
+              { icon: 'fa-users', num: '5000+', label: 'Enrolled Students', delay: 50 },
+              { icon: 'fa-chalkboard-teacher', num: '200+', label: 'Expert Faculty', delay: 100 },
+              { icon: 'fa-trophy', num: '98%', label: 'Success Rate', delay: 150 },
             ].map(({ icon, num, label, delay }) => (
               <div className="stat-line-card" key={label} data-aos="fade-up" data-aos-delay={delay}>
                 <div className="stat-line-icon"><i className={`fas ${icon}`}></i></div>
@@ -74,14 +75,14 @@ export default function Home() {
           <div className="principal-message-grid">
             <div className="principal-text-col" data-aos="fade-right">
               <span className="section-subtitle">Leadership</span>
-              <h2 className="section-title">Message from chairman</h2>
-              <h3 className="principal-name">MIAN MANZOOR AHMED</h3>
+              <h2 className="section-title" style={{ fontSize: '2.5rem', marginBottom: '0.5rem', color: 'var(--primary-blue)' }}>Message from chairman</h2>
+              <h3 className="principal-name" style={{ color: 'var(--primary-blue)', fontWeight: '800' }}>MIAN MANZOOR AHMED</h3>
               <div className="principal-message-content">
                 <p>Our vision is to create future-ready leaders by building solid Islamic values with modern education, and developing well-rounded individuals who lead with integrity and positively impact society as responsible global citizens.</p>
               </div>
             </div>
             <div className="principal-image-col" data-aos="fade-left">
-              <img src="/img/chairman.png" alt="MIAN MANZOOR AHMED - Chairman" className="principal-img" />
+              <img src="/img/chairman.png" alt="MIAN MANZOOR AHMED - Chairman" className="principal-img" loading="lazy" />
             </div>
           </div>
         </div>
@@ -96,10 +97,10 @@ export default function Home() {
           </div>
           <div className="hprograms-grid">
             {[
-              { icon: 'fa-hand-holding-heart', title: 'Faith-Based Leadership', desc: 'A program that blends Islamic education with leadership training, helping students develop strong character guided by Quranic teachings and ethical values.', delay: 100 },
-              { icon: 'fa-book-open', title: 'Holistic Academic Excellence', desc: 'A balanced academic program combining Islamic studies with modern subjects, encouraging critical thinking and problem-solving skills.', delay: 200 },
-              { icon: 'fa-user-shield', title: 'Character Development & Ethical Foundations', desc: 'Values-based education focused on building integrity, discipline, and global citizenship rooted in Islamic principles.', delay: 300 },
-              { icon: 'fa-tools', title: 'Practical Skills & Experiential Learning', desc: 'Students develop communication, leadership, and teamwork skills through workshops, projects, and real-world experiences.', delay: 400 },
+              { icon: 'fa-hand-holding-heart', title: 'Faith-Based Leadership', desc: 'A program that blends Islamic education with leadership training, helping students develop strong character guided by Quranic teachings and ethical values.', delay: 50 },
+              { icon: 'fa-book-open', title: 'Holistic Academic Excellence', desc: 'A balanced academic program combining Islamic studies with modern subjects, encouraging critical thinking and problem-solving skills.', delay: 100 },
+              { icon: 'fa-user-shield', title: 'Character Development & Ethical Foundations', desc: 'Values-based education focused on building integrity, discipline, and global citizenship rooted in Islamic principles.', delay: 150 },
+              { icon: 'fa-tools', title: 'Practical Skills & Experiential Learning', desc: 'Students develop communication, leadership, and teamwork skills through workshops, projects, and real-world experiences.', delay: 200 },
             ].map(({ icon, title, desc, delay }) => (
               <div key={title} className="hprogram-card" data-aos="fade-up" data-aos-delay={delay}>
                 <div className="hprogram-icon"><i className={`fas ${icon}`}></i></div>
@@ -120,10 +121,10 @@ export default function Home() {
           </div>
           <div className="islamic-cards-grid">
             {[
-              { icon: 'fa-book-quran', title: 'Tafseer', desc: 'In-depth study of the Quran with focus on interpretation and real-life application.', delay: 100 },
-              { icon: 'fa-mosque', title: 'Hadith', desc: 'Learning the sayings and teachings of the Prophet Muhammad (PBUH) to build ethical character.', delay: 200 },
-              { icon: 'fa-scale-balanced', title: 'Fiqh & Aqeedah', desc: 'Understanding Islamic beliefs and jurisprudence to guide students in moral decision-making.', delay: 300 },
-              { icon: 'fa-heart', title: 'Seerah', desc: 'Lessons from the life of the Prophet Muhammad (PBUH) focusing on leadership, resilience, and compassion.', delay: 400 },
+              { icon: 'fa-book-quran', title: 'Tafseer', desc: 'In-depth study of the Quran with focus on interpretation and real-life application.', delay: 50 },
+              { icon: 'fa-mosque', title: 'Hadith', desc: 'Learning the sayings and teachings of the Prophet Muhammad (PBUH) to build ethical character.', delay: 100 },
+              { icon: 'fa-scale-balanced', title: 'Fiqh & Aqeedah', desc: 'Understanding Islamic beliefs and jurisprudence to guide students in moral decision-making.', delay: 150 },
+              { icon: 'fa-heart', title: 'Seerah', desc: 'Lessons from the life of the Prophet Muhammad (PBUH) focusing on leadership, resilience, and compassion.', delay: 200 },
             ].map(({ icon, title, desc, delay }) => (
               <div key={title} className="isl-card" data-aos="flip-left" data-aos-delay={delay}>
                 <div className="isl-front">
@@ -189,12 +190,12 @@ export default function Home() {
       {/* ENROLL CTA */}
       <section className="enroll-cta section bg-blue">
         <div className="container">
-          <div className="enroll-cta-inner" data-aos="zoom-in" data-aos-duration="800">
+          <div className="enroll-cta-inner" data-aos="zoom-in" data-aos-duration="400">
             <div className="enroll-cta-content">
               <span className="enroll-kicker">Start Your Journey Today</span>
               <h2>Enroll Now</h2>
               <p>"A place where education promotes honesty, responsibility, and respect for diversity."</p>
-              <Link to="/contact" className="btn-enroll">
+              <Link to="/contact#contact-form" className="btn-enroll">
                 <i className="fas fa-arrow-right"></i> Join IQRA Pioneers College
               </Link>
             </div>

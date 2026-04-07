@@ -11,10 +11,9 @@ export default function Footer() {
             </Link>
             <p className="footer-desc">Empowering the youth with quality education, modern skills, and unwavering ethical values to become the leaders of tomorrow.</p>
             <div className="social-links">
-              <a href="#"><i className="fab fa-facebook-f"></i></a>
-              <a href="#"><i className="fab fa-twitter"></i></a>
-              <a href="#"><i className="fab fa-instagram"></i></a>
-              <a href="#"><i className="fab fa-linkedin-in"></i></a>
+              <a href="https://www.facebook.com/iqrapioneerscollege" target="_blank" rel="noopener noreferrer"><i className="fab fa-facebook-f"></i></a>
+              <a href="https://www.tiktok.com/@iqrapioneerscollege" target="_blank" rel="noopener noreferrer"><i className="fab fa-tiktok"></i></a>
+              <a href="https://www.instagram.com/iqrapioneers/" target="_blank" rel="noopener noreferrer"><i className="fab fa-instagram"></i></a>
             </div>
           </div>
 

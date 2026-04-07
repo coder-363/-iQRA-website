@@ -47,9 +47,9 @@ export default function LifeAtCampus() {
         </div>
         <div className="container hero-redesign-container">
           <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="900">
-            <span className="hero-tag">🎓 Vibrant Campus Life</span>
-            <h1 className="hero-redesign-title">Life at Campus</h1>
-            <p className="hero-redesign-tagline">More Than Just a Classroom Experience</p>
+            <span className="hero-tag">🎓 Life at Campus — For Boys</span>
+            <h1 className="hero-redesign-title">Life at Boys' Campus</h1>
+            <p className="hero-redesign-tagline">Excellence in Every Field</p>
             <p className="hero-redesign-desc">Explore the diverse activities, clubs, and events that make life at IQRA Pioneers College an unforgettable journey of personal growth.</p>
             <div className="hero-redesign-btns">
               <Link to="/contact" className="btn-hero-primary"><i className="fas fa-user-graduate"></i> Join Us Now</Link>
@@ -63,8 +63,8 @@ export default function LifeAtCampus() {
       <section className="about-intro section bg-white">
         <div className="container">
           <div className="section-header text-center" data-aos="fade-up">
-            <span className="section-subtitle">Vibrant &amp; Engaging</span>
-            <h2 className="section-title">Life at Campus</h2>
+            <span className="section-subtitle">Vibrant &amp; Focused</span>
+            <h2 className="section-title">Life at Campus — For Boys</h2>
             <div className="about-text-content mt-4">
               <p>At IQRA Pioneers College, student life extends well beyond the classroom. We offer a vibrant campus environment designed to foster personal growth, encourage teamwork, and build lasting friendships.</p>
             </div>
@@ -78,18 +78,18 @@ export default function LifeAtCampus() {
           {features.map(({ subtitle, title, paragraphs, imgSrc, imgAlt, reverse }) => (
             <div className="side-feature-row" key={title}>
               {reverse && (
-                <div className="side-feature-image" data-aos="fade-right" data-aos-duration="800">
-                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} /></div>
+                <div className="side-feature-image" data-aos="fade-right" data-aos-duration="400">
+                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} loading="lazy" /></div>
                 </div>
               )}
-              <div className="side-feature-content" data-aos={reverse ? 'fade-left' : 'fade-right'} data-aos-duration="800" data-aos-delay={reverse ? 150 : 0}>
+              <div className="side-feature-content" data-aos={reverse ? 'fade-left' : 'fade-right'} data-aos-duration="400" data-aos-delay={reverse ? 80 : 0}>
                 <span className="section-subtitle">{subtitle}</span>
                 <h2>{title}</h2>
                 {paragraphs.map((p, i) => <p key={i}>{p}</p>)}
               </div>
               {!reverse && (
-                <div className="side-feature-image" data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
-                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} /></div>
+                <div className="side-feature-image" data-aos="fade-left" data-aos-duration="400" data-aos-delay="80">
+                  <div className="side-feature-img-wrapper"><img src={imgSrc} alt={imgAlt} loading="lazy" /></div>
                 </div>
               )}
             </div>

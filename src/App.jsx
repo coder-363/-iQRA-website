@@ -9,6 +9,7 @@ import LifeAtCampus from './pages/LifeAtCampus';
 import Facilities from './pages/Facilities';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
+import ForGirls from './pages/ForGirls';
 
 // Scroll to top and re-init AOS on every route change
 function ScrollToTop() {
@@ -23,10 +24,10 @@ function ScrollToTop() {
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 1000,
-      easing: 'ease-out-cubic',
+      duration: 500,
+      easing: 'ease-out',
       once: true,
-      offset: 120,
+      offset: 100,
     });
   }, []);
 
@@ -38,6 +39,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/about" element={<About />} />
         <Route path="/life-at-campus" element={<LifeAtCampus />} />
+        <Route path="/life-at-campus/for-girls" element={<ForGirls />} />
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />

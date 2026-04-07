@@ -24,7 +24,7 @@
     --accent-yellow-dark: #CA8A04;
     /* Darker Yellow */
 
-    --text-dark: #0F172A;
+    --text-dark: #ffffff;
     /* Deep Blue used for Headings on light bg */
     --text-medium: #8998a6;
     /* Slate 600 used for Body on light bg */
@@ -53,9 +53,9 @@
     --shadow-glow: 0 0 20px rgba(234, 179, 8, 0.3);
 
     /* Transitions */
-    --transition-fast: 0.2s ease;
-    --transition-normal: 0.3s ease;
-    --transition-slow: 0.5s ease;
+    --transition-fast: 0.1s ease;
+    --transition-normal: 0.15s ease;
+    --transition-slow: 0.25s ease;
 }
 
 /* ===============================================
@@ -331,13 +331,20 @@ textarea {
 .nav-list {
     display: flex;
     gap: 2rem;
+    align-items: center;
 }
 
 .nav-link {
+    font-size: 1.1rem;
     font-weight: 500;
-    color: var(--text-medium);
+    color: #ffffff !important;
     position: relative;
     padding: 0.5rem 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+    line-height: normal;
+    display: flex;
+    align-items: center;
 }
 
 .nav-link:hover,
@@ -361,10 +368,58 @@ textarea {
     width: 100%;
 }
 
+/* If the link has a text span, keep the underline within it */
+.nav-link .nav-link-text {
+    position: relative;
+    padding-bottom: 2px;
+}
+
+.nav-dropdown-toggle::after {
+    display: none; /* Hide the full-width underline for dropdowns */
+}
+
+.nav-dropdown-toggle .nav-link-text::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: var(--accent-yellow);
+    transition: var(--transition-normal);
+}
+
+.nav-dropdown-toggle:hover .nav-link-text::after,
+.nav-dropdown-toggle.active .nav-link-text::after {
+    width: 100%;
+}
+
 .nav-actions {
     display: flex;
     align-items: center;
-    gap: 1rem;
+    gap: 1.5rem;
+}
+
+.apply-btn {
+    background-color: var(--accent-yellow) !important;
+    color: var(--primary-blue) !important;
+    padding: 0.6rem 1.4rem !important;
+    border-radius: var(--border-radius-pill) !important;
+    font-weight: 600 !important;
+    font-size: 0.95rem !important;
+    transition: all 0.3s ease !important;
+    box-shadow: 0 4px 15px rgba(234, 179, 8, 0.3) !important;
+}
+
+.apply-btn:hover {
+    background-color: var(--accent-yellow-dark) !important;
+    color: #ffffff !important;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(202, 138, 4, 0.4) !important;
+}
+
+.apply-btn::after {
+    display: none !important;
 }
 
 .mobile-toggle {
@@ -372,6 +427,131 @@ textarea {
     font-size: 1.5rem;
     color: var(--secondary-white);
     cursor: pointer;
+}
+
+/* --- Dropdown Styles --- */
+.nav-item-dropdown {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.nav-dropdown-toggle {
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 1.1rem;
+    font-weight: 500;
+    color: #fff !important;
+    display: flex;
+    align-items: center;
+    gap: 0;
+    white-space: nowrap;
+    flex-shrink: 0;
+    padding: 0.5rem 0;
+}
+
+.nav-chevron {
+    font-size: 0.75rem;
+    transition: transform 0.3s ease;
+}
+
+.nav-chevron.rotated {
+    transform: rotate(180deg);
+}
+
+.nav-dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    transform: translateX(-50%) translateY(10px);
+    background-color: var(--secondary-white);
+    border-radius: var(--border-radius-md);
+    box-shadow: var(--shadow-xl);
+    padding: 0.5rem;
+    min-width: fit-content;
+    display: flex;
+    gap: 0.5rem;
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+    z-index: 1010;
+    margin-top: 1rem;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-dropdown-menu::before {
+    content: '';
+    position: absolute;
+    top: -6px;
+    left: 50%;
+    transform: translateX(-50%) rotate(45deg);
+    width: 12px;
+    height: 12px;
+    background-color: var(--secondary-white);
+    border-top: 1px solid rgba(0, 0, 0, 0.05);
+    border-left: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.nav-dropdown-menu.open {
+    opacity: 1;
+    visibility: visible;
+    transform: translateX(-50%) translateY(0);
+}
+
+.nav-dropdown-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    color: var(--text-medium);
+    font-size: 0.95rem;
+    font-weight: 500;
+    transition: var(--transition-fast);
+    white-space: nowrap;
+    border-radius: var(--border-radius-sm);
+}
+
+.nav-dropdown-item:hover,
+.nav-dropdown-item.active {
+    background-color: var(--secondary-bg);
+    color: var(--primary-blue);
+}
+
+.dropdown-icon {
+    font-size: 1.1rem;
+}
+
+@media (max-width: 768px) {
+    .nav-dropdown-menu {
+        position: static;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        background-color: transparent;
+        border: none;
+        padding: 0;
+        margin-top: 0;
+        display: none;
+    }
+    .nav-dropdown-menu.open {
+        display: block;
+        transform: none;
+    }
+    .nav-dropdown-menu::before {
+        display: none;
+    }
+    .nav-dropdown-item {
+        padding: 0.5rem 1rem;
+        color: var(--text-medium-inverse); /* using inverse for typical mobile menu dark bg */
+    }
+    .nav-dropdown-item:hover,
+    .nav-dropdown-item.active {
+      color: var(--accent-yellow);
+      background-color: rgba(255, 255, 255, 0.05);
+    }
 }
 
 /* ===============================================
@@ -644,10 +824,9 @@ body {
     z-index: 2;
     transition: transform 0.5s ease;
 }
-
-.principal-image-col:hover .principal-img {
-    transform: scale(1.05);
-}
+/* .principal-image-col:hover .principal-img {
+    transform: scale(0.93);
+} */
 
 .principal-text-col {
     padding-left: 0;
@@ -878,9 +1057,7 @@ body {
 }
 
 /* Adjust grid for programs to center the bottom ones if not a multiple of 3 */
-.programs-grid .program-card:last-child {
-    /* Optional: To center the last few items if needed, but modern grids handle it ok */
-}
+
 
 /* ===============================================
     6. STATISTICS SECTION
@@ -2510,6 +2687,7 @@ body {
 .isl-front h3 {
     font-size: 1.8rem;
     color: var(--primary-blue);
+    text-align: center;
 }
 
 /* Expected Outcomes */
@@ -3020,3 +3198,198 @@ body {
         grid-template-columns: 1fr;
     }
 }
+
+/* ===============================================
+   FOR GIRLS PAGE SPECIFIC STYLES (NO IMAGES)
+=============================================== */
+.girls-hero-no-img {
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light)) !important;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero-bg-plain {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0.1;
+    background-image: radial-gradient(#fff 1px, transparent 1px);
+    background-size: 30px 30px;
+}
+
+.girls-tag {
+    background-color: rgba(234, 179, 8, 0.1) !important;
+    color: var(--accent-yellow) !important;
+    border: 1px solid rgba(234, 179, 8, 0.2) !important;
+}
+
+.girls-highlights-section {
+    padding: 6rem 0;
+}
+
+.girls-highlights-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+.girls-highlight-card {
+    text-align: center;
+    padding: 3rem 2rem;
+    background: #fff;
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--shadow-lg);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0, 0, 0, 0.05);
+}
+
+.girls-highlight-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+    border-color: var(--accent-yellow);
+}
+
+.girls-highlight-icon {
+    font-size: 3rem;
+    margin-bottom: 1.5rem;
+    display: block;
+}
+
+.girls-highlight-label {
+    font-size: 1.25rem;
+    color: var(--primary-blue);
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.girls-highlight-desc {
+    font-size: 0.95rem;
+    color: var(--text-medium);
+    line-height: 1.6;
+}
+
+/* Feature Cards Grid */
+.girls-features-info-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2.5rem;
+    margin-top: 3rem;
+}
+
+.girls-feature-card-full {
+    background: #f8fafc;
+    padding: 3rem;
+    border-radius: var(--border-radius-lg);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    border-left: 5px solid var(--accent-yellow);
+    box-shadow: var(--shadow-sm);
+    transition: all 0.3s ease;
+}
+
+.girls-feature-card-full:hover {
+    background: #fff;
+    box-shadow: var(--shadow-lg);
+    transform: scale(1.02);
+}
+
+.girls-feature-card-icon {
+    font-size: 2.5rem;
+    width: 60px;
+    height: 60px;
+    background: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 12px;
+    box-shadow: var(--shadow-sm);
+}
+
+.girls-feature-card-content h2 {
+    margin-bottom: 1rem;
+    font-size: 1.75rem;
+    color: var(--primary-blue);
+}
+
+.girls-feature-card-content p {
+    margin-bottom: 1rem;
+    font-size: 1.05rem;
+    color: var(--text-medium);
+}
+
+.girls-cta-section {
+    padding: 10rem 0;
+    margin-top: 4rem;
+    background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
+    color: #fff;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.girls-cta-inner {
+    max-width: 850px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 2;
+}
+
+.girls-cta-badge {
+    display: inline-block;
+    padding: 0.6rem 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-radius: var(--border-radius-pill);
+    font-size: 0.95rem;
+    font-weight: 600;
+    margin-bottom: 2.5rem;
+    letter-spacing: 0.5px;
+}
+
+.girls-cta-title {
+    font-size: 3.5rem;
+    font-weight: 800;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #fff !important;
+}
+
+.girls-cta-desc {
+    font-size: 1.25rem;
+    margin-bottom: 3.5rem;
+    opacity: 0.9;
+    max-width: 700px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.girls-cta-btns {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+}
+
+@media (max-width: 1024px) {
+    .girls-features-info-grid {
+        grid-template-columns: 1fr;
+    }
+    .girls-highlights-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 640px) {
+    .girls-highlights-grid {
+        grid-template-columns: 1fr;
+    }
+    .girls-feature-card-full {
+        padding: 2rem;
+    }
+    .girls-cta-title {
+        font-size: 2.5rem;
+    }
+}
+
