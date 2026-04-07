@@ -3506,24 +3506,19 @@ body {
 }
 
 @media (max-width: 768px) {
-    /* Show full hero image on mobile instead of cropping */
-    .hero-bg-slider {
-        background-color: var(--primary-blue);
-    }
     .hero-slide {
-        background-size: contain;
-        background-position: center center;
-        background-color: var(--primary-blue);
+        background-size: cover;
+        background-position: center;
     }
     .hero-redesign {
-        min-height: auto;
+        min-height: 80vh;
         height: auto;
         padding-top: 6rem;
         padding-bottom: 3rem;
     }
     .slide {
-        background-size: contain;
-        background-position: center center;
+        background-size: cover;
+        background-position: center;
     }
     .hero {
         min-height: 60vh;
