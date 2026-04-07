@@ -3393,3 +3393,114 @@ body {
     }
 }
 
+
+
+/* --- GLOBAL MOBILE OPTIMIZATION OVERRIDES --- */
+@media (max-width: 768px) {
+    .section {
+        padding: 3rem 0;
+    }
+    .page-header-offset {
+        padding-top: calc(3rem + 80px) !important;
+    }
+    .hero-redesign {
+        height: auto;
+        min-height: 100vh;
+        padding-top: 8rem;
+        padding-bottom: 3rem;
+        text-align: center;
+    }
+    .hero-redesign-container {
+        justify-content: center;
+        text-align: center;
+    }
+    .hero-redesign-desc {
+        margin-left: auto;
+        margin-right: auto;
+    }
+    .hero-tag {
+        margin: 0 auto 1.5rem;
+    }
+    .hero-redesign-title {
+        font-size: 2.5rem;
+    }
+    .hero-redesign-btns {
+        flex-direction: column;
+        align-items: stretch;
+    }
+    .btn-hero-primary, .btn-hero-outline, .btn {
+        width: 100%;
+        justify-content: center;
+    }
+    .section-title {
+        font-size: 2rem;
+    }
+    .hero-stats-line {
+        padding: 2rem 0;
+    }
+    .stats-line-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+        padding: 1.5rem;
+        text-align: center;
+    }
+    .stat-line-card {
+        flex-direction: column;
+        border-right: none;
+        border-bottom: 1px solid rgba(15, 23, 42, 0.05);
+        padding-bottom: 1.5rem;
+        gap: 1rem;
+    }
+    .stat-line-card:last-child {
+        border-bottom: none;
+        padding-bottom: 0;
+    }
+    .mv-grid, .approach-grid, .islamic-grid, .practical-grid, .outcomes-redesign-grid, .practical-redesign-grid, .gallery-grid, .features-grid, .programs-grid, .footer-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .principal-message-grid {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+    .inau-card {
+        padding: 2rem 1.5rem;
+    }
+    .event-title {
+        font-size: 1.8rem !important;
+    }
+    .inau-label {
+        font-size: 0.8rem;
+    }
+    .principal-image-col {
+        height: 300px;
+    }
+    .form-grid-3, .contact-info-landscape, .form-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .girls-highlights-grid, .girls-features-info-grid {
+        grid-template-columns: 1fr !important;
+    }
+    .girls-cta-section {
+        padding: 4rem 1.5rem;
+    }
+    .girls-cta-title {
+        font-size: 2rem;
+    }
+    .girls-feature-card-full {
+        padding: 1.5rem;
+    }
+    .card-img {
+        width: calc(100% + 3rem);
+        margin: -1.5rem -1.5rem 1.5rem -1.5rem;
+    }
+    .feature-card, .program-card, .practical-redesign-card, .islamic-card {
+        padding: 1.5rem;
+    }
+    .nav-actions {
+        display: flex;
+        align-items: center;
+    }
+    .hero-info-cards {
+        margin-top: 2rem;
+    }
+}
