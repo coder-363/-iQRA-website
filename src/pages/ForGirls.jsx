@@ -134,7 +134,7 @@ export default function ForGirls() {
             <p className="girls-cta-desc">
               Become part of a proud tradition of academic excellence and personal growth at IQRA Pioneers College. Apply today and take the first step toward an extraordinary future.
             </p>
-            <div className="girls-cta-btns flex flex-col md:flex-row md:justify-center">
+            <div className="girls-cta-btns flex flex-col items-center md:flex-row md:justify-center">
               <Link to="/contact#contact-form" className="btn btn-accent btn-large">
                 <i className="fas fa-paper-plane" /> Apply Now
               </Link>
