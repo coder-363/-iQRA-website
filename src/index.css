@@ -3447,6 +3447,8 @@ body {
         flex-direction: column;
         gap: 0.8rem;
         width: 100%;
+        align-items: flex-start !important;
+        text-align: left !important;
     }
 
     .nav-item-dropdown {
