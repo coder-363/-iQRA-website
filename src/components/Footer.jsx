@@ -7,7 +7,7 @@ export default function Footer() {
         <div className="footer-grid">
           <div className="footer-brand">
             <Link to="/" className="logo footer-logo">
-              <img src="/img/logoiqra 2.png" alt="IQRA Pioneers College Logo" className="logo-img" />
+              <img src="/img/log1.png" alt="IQRA Pioneers College Logo" className="logo-img" />
             </Link>
             <p className="footer-desc">Empowering the youth with quality education, modern skills, and unwavering ethical values to become the leaders of tomorrow.</p>
             <div className="social-links">

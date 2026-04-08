@@ -7,8 +7,8 @@ const navLinks = [
   {
     label: 'Life at Campus',
     dropdown: [
-      { to: '/life-at-campus', label: 'For Boys', icon: '🎓' },
-      { to: '/life-at-campus/for-girls', label: 'For Girls', icon: '🌸' },
+      { to: '/life-at-campus', label: 'For Boys' },
+      { to: '/life-at-campus/for-girls', label: 'For Girls' },
     ],
   },
   { to: '/facilities', label: 'Facilities' },
@@ -61,7 +61,7 @@ export default function Navbar() {
     <header className={`navbar${scrolled ? ' scrolled' : ''}`} id="navbar">
       <div className="container nav-container">
         <Link to="/" className="logo">
-          <img src="/img/logoiqra 2.png" alt="IQRA Pioneers College Logo" className="logo-img" />
+          <img src="/img/log1.png" alt="IQRA Pioneers College Logo" className="logo-img" />
           <span className="logo-text">IQRA PIONEER COLLEGE</span>
         </Link>
         <nav className={`nav-menu${menuOpen ? ' active' : ''}`} id="nav-menu">
@@ -90,7 +90,6 @@ export default function Navbar() {
                           to={to}
                           className={`nav-dropdown-item${location.pathname === to ? ' active' : ''}`}
                         >
-                          <span className="dropdown-icon">{icon}</span>
                           {label}
                         </Link>
                       ))}

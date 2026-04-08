@@ -497,7 +497,7 @@ textarea {
 .nav-dropdown-menu.open {
     opacity: 1;
     visibility: visible;
-    transform: translateX(-50%) translateY(0);
+    transform: translateY(0);
 }
 
 .nav-dropdown-item {
@@ -3554,4 +3554,52 @@ body {
         height: 350px !important;
         margin-bottom: 2rem;
     }
+
+    .btn-enroll {
+        padding: 1rem 2rem !important;
+        font-size: 1rem !important;
+    }
+
+    .enroll-cta-inner {
+        padding: 4rem 1.5rem !important;
+    }
+
+    .girls-cta-section {
+        padding: 5rem 0 !important;
+    }
+
+    .btn-large {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 1rem !important;
+    }
+
+    .contact-form {
+        align-items: center;
+        text-align: center;
+    }
+
+    .btn-submit {
+        align-self: center !important;
+    }
+
+    /* Consistent font size for mobile */
+    html {
+        font-size: 15px !important;
+    }
 }
+
+/* Dropdown Alignment Fix - Override to ensure it aligns to the left */
+@media (min-width: 769px) {
+    .nav-dropdown-menu {
+        left: 0 !important;
+        transform: translateY(10px) !important;
+    }
+    .nav-dropdown-menu.open {
+        transform: translateY(0) !important;
+    }
+    .nav-dropdown-menu::before {
+        left: 20px !important;
+        transform: rotate(45deg) !important;
+    }
+}
+
