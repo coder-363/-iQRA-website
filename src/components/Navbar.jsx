@@ -62,7 +62,6 @@ export default function Navbar() {
       <div className="container nav-container">
         <Link to="/" className="logo">
           <img src="/img/log1.png" alt="IQRA Pioneers College Logo" className="logo-img" />
-          <span className="logo-text">IQRA PIONEER COLLEGE</span>
         </Link>
         <nav className={`nav-menu${menuOpen ? ' active' : ''}`} id="nav-menu">
           <ul className="nav-list">
