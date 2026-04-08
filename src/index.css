@@ -3406,6 +3406,10 @@ body {
    ========================================================================== */
 @media (max-width: 768px) {
     /* Global Section Spacing */
+    .container {
+        padding: 0 1rem !important;
+    }
+
     .section {
         padding: 4rem 0 !important;
     }
@@ -3585,6 +3589,28 @@ body {
 
     .btn-submit {
         align-self: center !important;
+    }
+
+    /* Enroll CTA Mobile Overrides */
+    .enroll-cta-content h2 {
+        font-size: 2rem !important;
+    }
+    
+    .enroll-cta-content p {
+        font-size: 1rem !important;
+        margin-bottom: 2rem !important;
+    }
+
+    .enroll-kicker {
+        font-size: 0.85rem !important;
+    }
+
+    .btn-enroll {
+        padding: 0.8rem 1.5rem !important;
+        font-size: 0.95rem !important;
+        white-space: nowrap !important;
+        width: auto !important; /* Don't force full width if we want it in one line */
+        margin: 0 auto;
     }
 
     /* Consistent font size for mobile */
