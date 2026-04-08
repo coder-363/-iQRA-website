@@ -3445,23 +3445,23 @@ body {
 
     .nav-list {
         flex-direction: column;
-        gap: 1.5rem;
+        gap: 0.8rem;
         width: 100%;
     }
 
     .nav-item-dropdown {
         flex-direction: column !important;
-        align-items: center !important;
+        align-items: flex-start !important;
         width: 100% !important;
     }
 
     .nav-link {
         font-size: 1.3rem !important;
         color: #fff !important;
-        padding: 1rem 0;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        padding: 0.5rem 0;
+        border-bottom: none;
         width: 100%;
-        justify-content: center;
+        justify-content: flex-start;
     }
 
     .nav-dropdown-menu {
