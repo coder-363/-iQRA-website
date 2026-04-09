@@ -3219,6 +3219,16 @@ body {
     }
 
     /* Fixed Navbar & Menu Visibility */
+    .mobile-toggle {
+        display: block !important;
+        font-size: 1.5rem;
+        color: white;
+    }
+
+    .nav-actions .apply-btn {
+        display: none !important;
+    }
+
     .navbar {
         padding: 0.5rem 0 !important;
     }
