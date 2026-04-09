@@ -52,7 +52,8 @@ export default function ForGirls() {
       {/* HERO */}
       <section className="hero-redesign" id="for-girls-hero">
         <div className="hero-bg-slider">
-          <div className="hero-slide active" style={{ backgroundImage: "url('/img/girls-hero.jpg')" }}></div>
+          <div className="hero-slide active hero-slide-desktop" style={{ backgroundImage: "url('/img/play.png')" }}></div>
+          <div className="hero-slide active hero-slide-mobile" style={{ backgroundImage: "url('/img/play.png')" }}></div>
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
