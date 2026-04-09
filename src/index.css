@@ -3291,7 +3291,7 @@ body {
 
     .nav-dropdown-menu {
         position: static !important;
-        background: rgba(229, 225, 200, 0.897) !important;
+        background: #FFFFFF !important;
         width: 100%;
         box-shadow: none !important;
         margin-top: 0.5rem;
