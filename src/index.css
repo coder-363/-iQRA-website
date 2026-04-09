@@ -1304,7 +1304,7 @@ body {
     10. FOOTER
 =============================================== */
 .footer {
-    background-color: var(--primary-blue-alpha);
+    background-color: var(--primary-blue-light);
     color: var(--text-medium-inverse);
     padding: var(--section-padding);
     padding-bottom: 2rem;
