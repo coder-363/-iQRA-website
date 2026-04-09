@@ -129,14 +129,11 @@ export default function PrivacyPolicy() {
             <h2 style={{ fontSize: '1.5rem', color: 'var(--primary-blue)', marginBottom: '1rem', borderBottom: '1px solid #e2e8f0', paddingBottom: '0.5rem' }}>14. Consent</h2>
             <p style={{ marginBottom: '3rem' }}>By using our website, you hereby consent to our Privacy Policy and agree to its terms.</p>
 
-            {/* Print / Back Buttons */}
-            <div style={{ display: 'flex', gap: '1rem', justifyContent: 'center', borderTop: '1px solid #e2e8f0', paddingTop: '2rem', flexWrap: 'wrap' }}>
-              <Link to="/" className="btn btn-outline" style={{ display: 'inline-flex', padding: '0.6rem 2rem', borderRadius: '50px', border: '2px solid var(--primary-blue)', color: 'var(--primary-blue)' }}>
-                <i className="fas fa-arrow-left"></i> Back to Home
+            {/* Back Button */}
+            <div style={{ display: 'flex', justifyContent: 'center', borderTop: '1px solid #e2e8f0', paddingTop: '2rem' }}>
+              <Link to="/" className="btn btn-accent" style={{ display: 'inline-flex', padding: '0.8rem 2.5rem', borderRadius: '50px' }}>
+                <i className="fas fa-arrow-left" style={{ marginRight: '8px' }}></i> Back to Home
               </Link>
-              <button onClick={() => window.print()} className="btn btn-accent" style={{ display: 'inline-flex', padding: '0.6rem 2rem', borderRadius: '50px', border: 'none', cursor: 'pointer', background: 'var(--primary-blue)', color: 'white' }}>
-                <i className="fas fa-print"></i> Print Document
-              </button>
             </div>
             
           </div>
@@ -148,21 +145,6 @@ export default function PrivacyPolicy() {
         @media (max-width: 768px) {
           .privacy-document-body {
             padding: 2rem 1.5rem !important;
-          }
-        }
-        @media print {
-          .navbar, .footer, .btn {
-            display: none !important;
-          }
-          body {
-            background: #fff !important;
-          }
-          .section {
-            padding: 0 !important;
-            background: #fff !important;
-          }
-          div[style*="boxShadow"] {
-            box-shadow: none !important;
           }
         }
       `}} />
