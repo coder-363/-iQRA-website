@@ -3306,7 +3306,7 @@ body {
     }
 
     .nav-dropdown-item {
-        color: #FFFFFF !important;
+        color: var(--primary-blue) !important;
         padding: 0.85rem 1.2rem !important;
         font-size: 1.15rem !important;
         font-weight: 600 !important;
@@ -3317,8 +3317,8 @@ body {
     }
 
     .nav-dropdown-item.active {
-        color: #FFD700 !important; /* Gold text */
-        background: rgba(255, 255, 255, 0.1) !important;
+        color: #FFFFFF !important;
+        background: var(--primary-blue) !important;
         border-radius: 8px;
         font-weight: 700 !important;
         opacity: 1 !important;
