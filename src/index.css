@@ -3290,7 +3290,7 @@ body {
         justify-content: flex-start;
     }
 
-    .nav-dropdown-menu, #life-at-campus-dropdown {
+    .nav-dropdown-menu {
         position: static !important;
         background: #FFFFFF !important;
         width: 100%;
@@ -3301,7 +3301,7 @@ body {
     }
 
     .nav-dropdown-menu.open {
-        display: flex;
+        display: flex !important;
         flex-direction: column;
         padding: 1rem;
     }
