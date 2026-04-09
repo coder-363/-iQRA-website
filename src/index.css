@@ -2079,6 +2079,7 @@ body {
     font-weight: 800;
     line-height: 1.1;
     margin-bottom: 1rem;
+    color: white !important;
 }
 
 .hero-redesign-tagline {
