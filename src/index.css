@@ -427,7 +427,7 @@ textarea {
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background-color: #FFFFFF;
+    background-color: #ffffff;
     border-radius: var(--border-radius-md);
     box-shadow: 0 10px 40px rgba(0,0,0,0.15);
     padding: 0.75rem;
@@ -492,10 +492,11 @@ textarea {
         opacity: 1;
         visibility: visible;
         transform: none;
-        background-color: transparent;
+        background-color: #ffffff;
         border: none;
-        padding: 0;
-        margin-top: 0;
+        padding: 0.5rem;
+        margin-top: 0.5rem;
+        border-radius: 8px;
         display: none;
     }
     .nav-dropdown-menu.open {
@@ -507,7 +508,7 @@ textarea {
     }
     .nav-dropdown-item {
         padding: 0.5rem 1rem;
-        color: var(--text-medium-inverse); /* using inverse for typical mobile menu dark bg */
+        color: var(--primary-blue);
     }
     .nav-dropdown-item:hover,
     .nav-dropdown-item.active {
