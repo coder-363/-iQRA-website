@@ -61,7 +61,7 @@ export default function Contact() {
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
-          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="900">
+          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
             <span className="hero-tag">📞 Get in Touch</span>
             <h1 className="hero-redesign-title">Contact Us</h1>
             <p className="hero-redesign-tagline">We're Here to Help You on Your Journey</p>

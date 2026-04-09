@@ -47,7 +47,7 @@ export default function LifeAtCampus() {
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
-          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="900">
+          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
             <span className="hero-tag">🎓 Life at Campus — For Boys</span>
             <h1 className="hero-redesign-title">Life at Boys' Campus</h1>
             <p className="hero-redesign-tagline">Excellence in Every Field</p>

@@ -57,7 +57,7 @@ export default function ForGirls() {
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
-          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="900">
+          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
             <span className="hero-tag girls-tag">Life at Campus — For Girls</span>
             <h1 className="hero-redesign-title">Empowering Every Girl</h1>
             <p className="hero-redesign-tagline">A Campus Where She Belongs, Thrives & Leads</p>
@@ -129,7 +129,7 @@ export default function ForGirls() {
       {/* CALL TO ACTION */}
       <section className="girls-cta-section section">
         <div className="container">
-          <div className="girls-cta-inner" data-aos="fade-up">
+          <div className="girls-cta-inner" data-aos="fade-up" data-aos-duration="400">
             <span className="girls-cta-badge">🌟 Your Journey Starts Here</span>
             <h2 className="girls-cta-title">Ready to Join Our Girls' Community?</h2>
             <p className="girls-cta-desc">

@@ -24,10 +24,10 @@ function ScrollToTop() {
 function App() {
   useEffect(() => {
     AOS.init({
-      duration: 500,
+      duration: 300,
       easing: 'ease-out',
       once: true,
-      offset: 100,
+      offset: 50,
     });
   }, []);
 

@@ -10,7 +10,7 @@ export default function About() {
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
-          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="900">
+          <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
             <span className="hero-tag">🎓 Learn More About Us</span>
             <h1 className="hero-redesign-title">About IQRA Pioneers College</h1>
             <p className="hero-redesign-tagline">Faith, Knowledge, Leadership — Shaping the Future Together</p>
