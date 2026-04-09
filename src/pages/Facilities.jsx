@@ -71,7 +71,7 @@ export default function Facilities() {
       </section>
 
       {/* STATS */}
-      <section className="hero-stats-line">
+      <section className="hero-stats-line section">
         <div className="container">
           <div className="stats-line-grid">
             {[
@@ -89,7 +89,7 @@ export default function Facilities() {
       </section>
 
       {/* FACILITY ROWS */}
-      <section className="side-feature-section bg-white">
+      <section className="side-feature-section section bg-white">
         <div className="container">
           {facilityRows.map(({ subtitle, title, paragraphs, imgSrc, imgAlt, reverse }) => (
             <div className="side-feature-row" key={title}>

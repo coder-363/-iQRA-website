@@ -75,7 +75,7 @@ export default function Contact() {
       </section>
 
       {/* CONTACT SECTION */}
-      <section className="contact-page section bg-white page-header-offset">
+      <section className="contact-page section bg-white">
         <div className="container">
           <div className="section-header text-center" data-aos="fade-up">
             <span className="section-subtitle">Get In Touch</span>
@@ -189,8 +189,8 @@ export default function Contact() {
                     <label>Message</label>
                     <textarea name="message" placeholder="How can we help you?" value={form.message} onChange={e => setForm({ ...form, message: e.target.value })} style={{ width: '100%', minHeight: '150px' }}></textarea>
                   </div>
-                  <div className="form-group" style={{ gridColumn: '1 / -1' }}>
-                    <button type="submit" className="btn btn-blue btn-submit w-full" disabled={submitting} style={{ padding: '1rem', borderRadius: '12px' }}>
+                   <div className="form-group" style={{ gridColumn: '1 / -1', display: 'flex', justifyContent: 'center', marginTop: '1rem' }}>
+                    <button type="submit" className="btn btn-accent btn-submit" disabled={submitting} style={{ padding: '1rem 2.5rem', borderRadius: '12px' }}>
                       {submitting ? (
                         <>
                           <i className="fas fa-spinner fa-spin"></i> Submitting...

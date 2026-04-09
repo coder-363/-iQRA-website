@@ -24,7 +24,7 @@ export default function About() {
       </section>
 
       {/* ABOUT INTRO */}
-      <section className="about-intro section bg-white page-header-offset">
+      <section className="about-intro section bg-white">
         <div className="container">
           <div className="section-header text-center" data-aos="fade-up">
             <span className="section-subtitle">Our Story</span>

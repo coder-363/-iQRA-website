@@ -63,7 +63,7 @@ export default function Home() {
       </section>
 
       {/* STATS */}
-      <section className="hero-stats-line">
+      <section className="hero-stats-line section">
         <div className="container">
           <div className="stats-line-grid">
             {[

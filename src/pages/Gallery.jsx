@@ -14,7 +14,7 @@ const galleryItems = [
 export default function Gallery() {
   return (
     <>
-      <section className="gallery section bg-blue page-header-offset" id="campus" style={{ paddingTop: '7rem' }}>
+      <section className="gallery section bg-blue page-header-offset" id="campus">
         <div className="container">
           <div className="section-header text-center">
             <span className="section-subtitle">Life at IQRA</span>

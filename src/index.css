@@ -40,7 +40,8 @@
     --font-main: 'Poppins', sans-serif;
 
     /* Spacing & Layout */
-    --section-padding: 5rem 0;
+    --section-padding: 6rem 0;
+    --section-padding-mobile: 3rem 0;
     --border-radius-sm: 8px;
     --border-radius-md: 16px;
     --border-radius-lg: 24px;
@@ -126,7 +127,7 @@ textarea {
 }
 
 .page-header-offset {
-    padding-top: calc(5rem + 100px);
+    padding-top: 120px;
 }
 
 
@@ -184,7 +185,7 @@ textarea {
 }
 
 .section-header {
-    margin-bottom: 3rem;
+    margin-bottom: 2rem;
 }
 
 .section-subtitle {
@@ -770,7 +771,6 @@ body {
     PRINCIPAL MESSAGE SECTION
 =============================================== */
 .principal-message-section {
-    padding: 6rem 0;
     overflow: hidden;
 }
 
@@ -1069,7 +1069,6 @@ body {
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
-    padding: 6rem 0;
     position: relative;
     color: var(--secondary-white);
 }
@@ -1352,7 +1351,8 @@ body {
 .footer {
     background-color: var(--primary-blue-light);
     color: var(--text-medium-inverse);
-    padding: 6rem 0 2rem;
+    padding: var(--section-padding);
+    padding-bottom: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
 }
 
@@ -1809,6 +1809,11 @@ body {
 }
 
 /* About Page Specific Styles */
+.about-intro {
+    padding-top: 4rem;
+    padding-bottom: 2rem;
+}
+
 .about-intro .about-text-content {
     max-width: 900px;
     margin: 0 auto;
@@ -2409,8 +2414,7 @@ body {
 /* Hero Stats Line Section */
 .hero-stats-line {
     position: relative;
-    padding: 80px 0;
-    /* Added significant vertical padding to create the gap */
+    padding: var(--section-padding);
     z-index: 20;
     background: transparent;
 }
@@ -2473,10 +2477,7 @@ body {
 }
 
 /* Inauguration Redesign */
-.inauguration-redesign {
-    position: relative;
-    padding: 10rem 0;
-}
+
 
 .inau-card {
     position: relative;
@@ -2813,7 +2814,7 @@ body {
 
 /* Side Feature Section */
 .side-feature-section {
-    padding: var(--section-padding);
+    padding-top: 2rem;
 }
 
 .side-feature-row {
@@ -2964,7 +2965,7 @@ body {
     }
 
     .hero-stats-line {
-        padding: 40px 0;
+        padding: var(--section-padding-mobile);
     }
 
     .stat-line-card {
@@ -3070,6 +3071,15 @@ body {
 
 .contact-form input::placeholder {
     color: #94a3b8;
+}
+
+.btn-submit {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+    margin: 2rem auto 0 !important;
+    width: fit-content !important;
+    min-width: 280px;
 }
 
 .contact-form input:focus,
@@ -3232,9 +3242,7 @@ body {
     border: 1px solid rgba(234, 179, 8, 0.2) !important;
 }
 
-.girls-highlights-section {
-    padding: 6rem 0;
-}
+
 
 .girls-highlights-grid {
     display: grid;
@@ -3328,7 +3336,6 @@ body {
 }
 
 .girls-cta-section {
-    padding: 10rem 0;
     margin-top: 4rem;
     background: linear-gradient(135deg, var(--primary-blue), var(--primary-blue-light));
     color: #fff;
@@ -3415,11 +3422,24 @@ body {
     }
 
     .section {
-        padding: 4rem 0 !important;
+        padding: var(--section-padding-mobile) !important;
     }
     
     .page-header-offset {
-        padding-top: calc(4rem + 70px) !important;
+        padding-top: 85px !important;
+    }
+
+    .about-intro {
+        padding-top: 2rem !important;
+        padding-bottom: 1.5rem !important;
+    }
+
+    .side-feature-section {
+        padding-top: 1.5rem !important;
+    }
+
+    .section-header {
+        margin-bottom: 1.5rem !important;
     }
 
     /* Fixed Navbar & Menu Visibility */
@@ -3511,9 +3531,9 @@ body {
     /* Hero Responsive fixes */
     .hero-redesign {
         height: auto;
-        min-height: 85vh;
-        padding-top: 8rem;
-        padding-bottom: 4rem;
+        min-height: 80vh;
+        padding-top: 7rem;
+        padding-bottom: 2.5rem;
         text-align: center;
     }
 
@@ -3542,10 +3562,21 @@ body {
         margin: 0 auto;
     }
 
-    .btn-hero-primary, .btn-hero-outline, .btn {
+    .btn-hero-primary, .btn-hero-outline {
         width: 100%;
         justify-content: center;
         padding: 1rem !important;
+    }
+
+    .btn:not(.btn-submit) {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem !important;
+    }
+
+    .btn-submit {
+        width: auto !important;
+        padding: 1rem 2.5rem !important;
     }
 
     /* Grid Flattening for better performance & readability */
@@ -3598,12 +3629,12 @@ body {
     }
 
     .contact-form {
-        align-items: center;
-        text-align: center;
+        align-items: flex-start;
+        text-align: left;
     }
 
     .btn-submit {
-        align-self: center !important;
+        margin: 1.5rem auto 0 !important;
     }
 
     /* Enroll CTA Mobile Overrides */

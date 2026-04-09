@@ -80,8 +80,8 @@ export default function ForGirls() {
         <div className="container">
           <div className="section-header text-center" data-aos="fade-up">
             <span className="section-subtitle">Vibrant &amp; Empowering</span>
-            <h2 className="section-title">Life at Campus — For Girls</h2>
-            <div className="about-text-content mt-4">
+            <h2 className="section-title" style={{ color: '#000000' }}>Life at Campus — For Girls</h2>
+            <div className="about-text-content">
               <p>
                 IQRA Pioneers College offers a vibrant, inclusive, and fully supportive campus experience for girls. Beyond academic excellence, we cultivate confidence, character, creativity, and lifelong friendships — preparing every young woman to take on the future with strength and grace.
               </p>

@@ -42,7 +42,7 @@ export default function LifeAtCampus() {
       {/* HERO */}
       <section className="hero-redesign" id="campus-life-hero">
         <div className="hero-bg-slider">
-          <div className="hero-slide active" style={{ backgroundImage: "url('/img/52.jpg')" }}></div>
+          <div className="hero-slide active" style={{ backgroundImage: "url('/img/play.png')" }}></div>
           <div className="hero-dark-overlay"></div>
         </div>
         <div className="container hero-redesign-container">
@@ -64,8 +64,8 @@ export default function LifeAtCampus() {
         <div className="container">
           <div className="section-header text-center" data-aos="fade-up">
             <span className="section-subtitle">Vibrant &amp; Focused</span>
-            <h2 className="section-title">Life at Campus — For Boys</h2>
-            <div className="about-text-content mt-4">
+            <h2 className="section-title" style={{ color: '#000000' }}>Life at Campus — For Boys</h2>
+            <div className="about-text-content">
               <p>At IQRA Pioneers College, student life extends well beyond the classroom. We offer a vibrant campus environment designed to foster personal growth, encourage teamwork, and build lasting friendships.</p>
             </div>
           </div>
@@ -73,7 +73,7 @@ export default function LifeAtCampus() {
       </section>
 
       {/* FEATURE ROWS */}
-      <section className="side-feature-section bg-white">
+      <section className="side-feature-section section bg-white">
         <div className="container">
           {features.map(({ subtitle, title, paragraphs, imgSrc, imgAlt, reverse }) => (
             <div className="side-feature-row" key={title}>
