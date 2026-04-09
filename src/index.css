@@ -2095,6 +2095,7 @@ body {
     margin: 0 0 2.5rem 0;
     opacity: 0.9;
     line-height: 1.6;
+    color: white !important;
 }
 
 .hero-redesign-btns {
