@@ -1305,10 +1305,14 @@ body {
 =============================================== */
 .footer {
     background-color: var(--primary-blue-light);
-    color: var(--text-medium-inverse);
+    color: white;
     padding: var(--section-padding);
     padding-bottom: 2rem;
     border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer a, .footer p, .footer li, .footer-desc {
+    color: white;
 }
 
 .footer-grid {
