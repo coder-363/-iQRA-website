@@ -1994,13 +1994,13 @@ body {
 /* Hero Redesign */
 .hero-redesign {
     position: relative;
+    z-index: 1;
     height: 100vh;
     min-height: 700px;
     display: flex;
     align-items: center;
     overflow: hidden;
     color: white;
-    
 }
 
 .hero-bg-slider {
@@ -3193,7 +3193,6 @@ body {
     html, body {
         overflow-x: hidden !important;
         width: 100% !important;
-        position: relative;
     }
 
     /* Global Section Spacing */
