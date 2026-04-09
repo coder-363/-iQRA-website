@@ -45,6 +45,9 @@
     
     --shadow-md: 0 4px 6px -1px rgba(0,0,0,0.1);
     --transition-normal: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
+    --secondary-white: #FFFFFF;
+    --secondary-bg: #F1F5F9;
 }
 
 /* ===============================================
@@ -424,19 +427,20 @@ textarea {
     top: 100%;
     left: 50%;
     transform: translateX(-50%) translateY(10px);
-    background-color: var(--secondary-white);
+    background-color: #FFFFFF;
     border-radius: var(--border-radius-md);
-    box-shadow: var(--shadow-xl);
-    padding: 0.5rem;
-    min-width: fit-content;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    padding: 0.75rem;
+    min-width: 200px;
     display: flex;
-    gap: 0.5rem;
+    flex-direction: column;
+    gap: 0.25rem;
     opacity: 0;
     visibility: hidden;
     transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
     z-index: 1010;
     margin-top: 1rem;
-    border: 1px solid rgba(0, 0, 0, 0.05);
+    border: 1px solid rgba(0, 0, 0, 0.08);
 }
 
 .nav-dropdown-menu::before {
@@ -461,14 +465,14 @@ textarea {
 .nav-dropdown-item {
     display: flex;
     align-items: center;
-    gap: 0.5rem;
-    padding: 0.5rem 1rem;
-    color: var(--text-medium);
-    font-size: 0.95rem;
-    font-weight: 500;
-    transition: var(--transition-fast);
+    gap: 0.75rem;
+    padding: 0.8rem 1.2rem;
+    color: var(--primary-blue);
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.2s ease;
     white-space: nowrap;
-    border-radius: var(--border-radius-sm);
+    border-radius: 8px;
 }
 
 .nav-dropdown-item:hover,
@@ -3302,13 +3306,14 @@ body {
     }
 
     .nav-dropdown-item {
-        color: rgba(255, 255, 255, 0.7) !important; /* Slightly faded by default */
-        padding: 0.75rem 1rem !important;
-        font-size: 1.1rem !important;
+        color: #FFFFFF !important;
+        padding: 0.85rem 1.2rem !important;
+        font-size: 1.15rem !important;
+        font-weight: 600 !important;
         justify-content: flex-start !important;
         text-align: left !important;
         width: 100% !important;
-        transition: all 0.3s ease;
+        transition: all 0.2s ease;
     }
 
     .nav-dropdown-item.active {
