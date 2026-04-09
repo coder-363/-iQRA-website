@@ -54,7 +54,7 @@ export default function Footer() {
         <div className="footer-bottom">
           <p>&copy; 2026 IQRA Pioneers College. All Rights Reserved.</p>
           <div className="footer-bottom-links">
-            <a href="#">Privacy Policy</a>
+            <Link to="/privacy-policy">Privacy Policy</Link>
             <a href="#">Terms of Service</a>
           </div>
         </div>

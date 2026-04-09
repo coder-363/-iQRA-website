@@ -10,6 +10,7 @@ import Facilities from './pages/Facilities';
 import Gallery from './pages/Gallery';
 import Contact from './pages/Contact';
 import ForGirls from './pages/ForGirls';
+import PrivacyPolicy from './pages/PrivacyPolicy';
 
 // Scroll to top and re-init AOS on every route change
 function ScrollToTop() {
@@ -43,6 +44,7 @@ function App() {
         <Route path="/facilities" element={<Facilities />} />
         <Route path="/gallery" element={<Gallery />} />
         <Route path="/contact" element={<Contact />} />
+        <Route path="/privacy-policy" element={<PrivacyPolicy />} />
       </Routes>
       <Footer />
     </BrowserRouter>
