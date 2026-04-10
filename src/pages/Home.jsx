@@ -45,7 +45,7 @@ export default function Home() {
       <section className="hero-redesign" id="home">
         <HeroSlider 
           slides={['/img/hero1.png', '/img/her-new.png', '/img/hero-new12.png']} 
-          mobileImage="/img/play.png"
+          mobileImage="/img/mobile-home.png"
         />
         <div className="container hero-redesign-container">
           <div className="hero-redesign-content" data-aos="fade-up" data-aos-duration="400">
