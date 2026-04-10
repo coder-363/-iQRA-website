@@ -9,7 +9,7 @@ const galleryItems = [
   { src: '/gallery/IMG_20251216_094833.jpg', title: 'Interactive Learning', desc: 'Engaging educational experiences', delay: 100 },
   { src: '/gallery/IMG_20251216_094903.jpg', title: 'Student Moments', desc: 'Capturing the college spirit', delay: 150 },
   { src: '/gallery/IMG_20251216_095106.jpg', title: 'Campus Activity', desc: 'Dynamic life at IQRA Pioneers', delay: 200 },
-  { src: '/gallery/gall.DNG', title: 'Campus Life', desc: 'Moments of growth and learning', delay: 250 },
+  { src: '/gallery/gall.jpg', title: 'Campus Life', desc: 'Moments of growth and learning', delay: 250 },
 ];
 
 export default function Gallery() {
